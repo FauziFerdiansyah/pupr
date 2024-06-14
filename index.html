@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!--
+    - primary meta tags
+  -->
+        <title>Adex</title>
+        <meta name="title" content="Adex" />
+        <meta
+            name="description"
+            content="This is a business agency html template made by codewithsadee"
+        />
+
+        <!--
+    - favicon
+  -->
+        <link rel="shortcut icon" href="./favicon.png" type="image/png" />
+
+        <!--
+    - google font link
+  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!--
+    - custom css link
+  -->
+        <link rel="stylesheet" href="./assets/css/style.css" />
+
+        <!--
+    - preload images
+  -->
+        <link rel="preload" as="image" href="./assets/images/hero-bg.jpg" />
+        <link rel="preload" as="image" href="./assets/images/banner-1.png" />
+        <link rel="preload" as="image" href="./assets/images/banner-1.png" />
+        <link rel="preload" as="image" href="./assets/images/banner-1.png" />
+    </head>
+
+    <body>
+        <!--
+    - #HEADER
+  -->
+
+        <header class="header" data-header>
+            <div class="container">
+                <a href="#" class="logo">
+                    <img
+                        src="./assets/images/logo.svg"
+                        width="118"
+                        height="30"
+                        alt="PUPR"
+                        class="logo"
+                    />
+                </a>
+
+                <nav class="navbar" data-navbar>
+                    <div class="navbar-top">
+                        <button
+                            class="nav-close-btn"
+                            aria-label="close menu"
+                            data-nav-toggler
+                        >
+                            <ion-icon
+                                name="close-outline"
+                                aria-hidden="true"
+                            ></ion-icon>
+                        </button>
+                    </div>
+
+                    <ul class="navbar-list">
+                        <li>
+                            <a href="#resi-digital" class="navbar-link"
+                                >Resi Digital</a
+                            >
+                        </li>
+
+                        <li>
+                            <a href="#" class="navbar-link">FAQ</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="navbar-link">Download</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="navbar-link">Hubungi Kami</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <button
+                    class="nav-open-btn"
+                    aria-label="open menu"
+                    data-nav-toggler
+                >
+                    <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+                </button>
+
+                <div class="overlay" data-nav-toggler data-overlay></div>
+            </div>
+        </header>
+
+        <main>
+            <article>
+                <!--
+        - #HERO
+      -->
+
+                <section
+                    class="section hero has-bg-image"
+                    aria-label="home"
+                    style='
+                        background-image: url("./assets/images/hero-bg.jpg"");
+                    '
+                >
+                    <div class="container">
+                        <div class="hero-slider" data-slider>
+                            <div class="slider-inner">
+                                <ul
+                                    class="slider-container"
+                                    data-slider-container
+                                >
+                                    <li class="slider-item">
+                                        <figure
+                                            class="img-holder"
+                                            style="
+                                                --width: auto;
+                                                --height: auto;
+                                            "
+                                        >
+                                            <img
+                                                src="./assets/images/banner-1.png"
+                                                width="575"
+                                                height="550"
+                                                alt=""
+                                                class="img-cover"
+                                            />
+                                        </figure>
+                                    </li>
+
+                                    <li class="slider-item">
+                                        <div class="hero-card">
+                                            <figure
+                                                class="img-holder"
+                                                style="
+                                                    --width: auto;
+                                                    --height: auto;
+                                                "
+                                            >
+                                                <img
+                                                    src="./assets/images/banner-1.png"
+                                                    width="575"
+                                                    height="550"
+                                                    alt="hero banner"
+                                                    class="img-cover"
+                                                />
+                                            </figure>
+                                        </div>
+                                    </li>
+
+                                    <li class="slider-item">
+                                        <figure
+                                            class="img-holder"
+                                            style="
+                                                --width: auto;
+                                                --height: auto;
+                                            "
+                                        >
+                                            <img
+                                                src="./assets/images/banner-1.png"
+                                                width="575"
+                                                height="550"
+                                                alt=""
+                                                class="img-cover"
+                                            />
+                                        </figure>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <button
+                                class="slider-btn prev"
+                                aria-label="slide to previous"
+                                data-slider-prev
+                            >
+                                <ion-icon
+                                    name="chevron-back-outline"
+                                ></ion-icon>
+                            </button>
+
+                            <button
+                                class="slider-btn next"
+                                aria-label="slide to next"
+                                data-slider-next
+                            >
+                                <ion-icon
+                                    name="chevron-forward-outline"
+                                ></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!--
+        - #SERVICE
+      -->
+
+                <section
+                    class="section service"
+                    aria-labelledby="service-label"
+                    id="resi-digital"
+                >
+                    <div class="container">
+                        <p class="section-subtitle" id="service-label">
+                            Resi Digital
+                        </p>
+
+                        <ul class="grid-list">
+                            <li>
+                                <div class="service-card">
+                                    <h3 class="h6 card-title">Ketentuan</h3>
+
+                                    <ul class="card-text">
+                                        <li>
+                                            Resi Digital hanya akan menyimpan
+                                            riwayat transaksi selama 3 hari.
+                                        </li>
+                                        <li>
+                                            Untuk mendapatkan riwayat transaksi
+                                            perjalanan selama 30 hari. Anda
+                                            dapat menggunakan aplikasi Travoy
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="service-card">
+                                    <h3 class="h6 card-title">
+                                        Cara Penggunaan
+                                    </h3>
+
+                                    <p class="card-text">
+                                        Cara Penggunaan Resi Digital Website:
+                                    </p>
+                                    <ul class="card-text">
+                                        <li>
+                                            Buka url residigital.jasamarga.co.id
+                                        </li>
+                                        <li>
+                                            Masukan No Kartu yang ada pada uang
+                                            elektronik Anda pada kolom dengan
+                                            label No. Kartu
+                                        </li>
+                                        <li>
+                                            Pilih tanggal pencarian transaksi
+                                            dengan tanggal awal hingga tanggal
+                                            akhir. Maksimal pencarian transaksi
+                                            adalah 3 hari.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+        <!--
+    - custom js link
+  -->
+        <script src="./assets/js/script.js"></script>
+
+        <!--
+    - ionicon
+  -->
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+    </body>
+</html>
