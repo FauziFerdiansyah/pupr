@@ -38,7 +38,6 @@
         <!--
     - preload images
   -->
-        <link rel="preload" as="image" href="./assets/images/hero-bg.jpg" />
         <link rel="preload" as="image" href="./assets/images/banner-1.png" />
         <link rel="preload" as="image" href="./assets/images/banner-1.png" />
         <link rel="preload" as="image" href="./assets/images/banner-1.png" />
@@ -83,11 +82,13 @@
                         </li>
 
                         <li>
-                            <a href="#" class="navbar-link">FAQ</a>
+                            <a href="#faq" class="navbar-link">FAQ</a>
                         </li>
 
                         <li>
-                            <a href="#" class="navbar-link">Download</a>
+                            <a href="#download-app" class="navbar-link"
+                                >Download</a
+                            >
                         </li>
 
                         <li>
@@ -114,13 +115,7 @@
         - #HERO
       -->
 
-                <section
-                    class="section hero has-bg-image"
-                    aria-label="home"
-                    style='
-                        background-image: url("./assets/images/hero-bg.jpg"");
-                    '
-                >
+                <section class="section hero slide-content" aria-label="home">
                     <div class="container">
                         <div class="hero-slider" data-slider>
                             <div class="slider-inner">
@@ -210,22 +205,22 @@
                 </section>
 
                 <!--
-        - #SERVICE
+        - #RESI-DIGITAL
       -->
 
                 <section
-                    class="section service"
-                    aria-labelledby="service-label"
+                    class="section resi-digital"
+                    aria-labelledby="resi-digital-label"
                     id="resi-digital"
                 >
                     <div class="container">
-                        <p class="section-subtitle" id="service-label">
+                        <p class="section-subtitle" id="resi-digital-label">
                             Resi Digital
                         </p>
 
                         <ul class="grid-list">
                             <li>
-                                <div class="service-card">
+                                <div class="resi-digital-card">
                                     <h3 class="h6 card-title">Ketentuan</h3>
 
                                     <ul class="card-text">
@@ -243,7 +238,7 @@
                             </li>
 
                             <li>
-                                <div class="service-card">
+                                <div class="resi-digital-card">
                                     <h3 class="h6 card-title">
                                         Cara Penggunaan
                                     </h3>
@@ -272,8 +267,490 @@
                         </ul>
                     </div>
                 </section>
+                <!--
+                - #FAQ
+                -->
+
+                <section
+                    class="faq-info"
+                    aria-labelledby="faq-info-label"
+                    id="faq"
+                >
+                    <div class="container">
+                        <div class="tabs-menu">
+                            <div
+                                class="tab tab-active"
+                                data-tab="faq-faq-info-resi"
+                            >
+                                <img
+                                    src="assets/images/icon/shapes-blue.svg"
+                                    alt="Tentang Resi Digital"
+                                    height="30"
+                                    width="30"
+                                />
+                                <h3>Tentang Resi Digital</h3>
+                            </div>
+                            <div class="tab" data-tab="faq-customer-care">
+                                <img
+                                    src="assets/images/icon/customer-care-blue.svg"
+                                    alt="Tentang Resi Digital"
+                                    height="30"
+                                    width="30"
+                                />
+                                <h3>Customer Care</h3>
+                            </div>
+                        </div>
+
+                        <div class="faq-info-content">
+                            <ul
+                                class="faq"
+                                data-tab-content="faq-faq-info-resi"
+                            >
+                                <li class="faq-info-item">
+                                    <div class="accordion-card" data-accordion>
+                                        <h3 class="card-title">
+                                            <button
+                                                class="accordion-btn"
+                                                data-accordion-btn
+                                            >
+                                                <spna class="span h5"
+                                                    >Apa itu Resi Digital</spna
+                                                >
+                                                <ion-icon
+                                                    name="add-outline"
+                                                    aria-hidden="true"
+                                                    class="down"
+                                                ></ion-icon>
+                                            </button>
+                                        </h3>
+
+                                        <p class="accordion-content">
+                                            Resi Digital adalah bukti transaksi
+                                            pembayaran tol yang dikeluarkan
+                                            dalam bentuk digital yang berisi
+                                            informasi seperti nomor transaksi,
+                                            tanggal dan waktu pembayaran, lokasi
+                                            gerbang tol yang dilewati dan jumlah
+                                            tol yang dibayarkan.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="faq-info-item">
+                                    <div class="accordion-card" data-accordion>
+                                        <h3 class="card-title">
+                                            <button
+                                                class="accordion-btn"
+                                                data-accordion-btn
+                                            >
+                                                <spna class="span h5"
+                                                    >Apa perbedaan Resi Digital
+                                                    Website dengan Resi Digital
+                                                    pada aplikasi Travoy?
+                                                </spna>
+                                                <ion-icon
+                                                    name="add-outline"
+                                                    aria-hidden="true"
+                                                    class="down"
+                                                ></ion-icon>
+                                            </button>
+                                        </h3>
+
+                                        <p class="accordion-content">
+                                            Resi Digital website hanya mencatat
+                                            transaksi 3 hari sedangkan resi
+                                            digital pada aplikasi Travoy dapat
+                                            mencatat transaksi 7-30 hari.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="faq-info-item">
+                                    <div class="accordion-card" data-accordion>
+                                        <h3 class="card-title">
+                                            <button
+                                                class="accordion-btn"
+                                                data-accordion-btn
+                                            >
+                                                <spna class="span h5"
+                                                    >Apa keuntungan menggunakan
+                                                    Resi Digital?</spna
+                                                >
+                                                <ion-icon
+                                                    name="add-outline"
+                                                    aria-hidden="true"
+                                                    class="down"
+                                                ></ion-icon>
+                                            </button>
+                                        </h3>
+
+                                        <div class="accordion-content">
+                                            Keuntungan menggunakan resi digital:
+                                            <ul>
+                                                <li>
+                                                    Dapat diakses melalui
+                                                    smartphone
+                                                </li>
+                                                <li>
+                                                    Mempermudah pengelolaan
+                                                    bukti transaksi tol
+                                                </li>
+                                                <li>
+                                                    Tidak khawatir akan rusak
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="faq-info-item">
+                                    <div class="accordion-card" data-accordion>
+                                        <h3 class="card-title">
+                                            <button
+                                                class="accordion-btn"
+                                                data-accordion-btn
+                                            >
+                                                <spna class="span h5"
+                                                    >Apakah Resi Digital dapat
+                                                    mencatat riwayat transaksi
+                                                    saya di seluruh ruas tol di
+                                                    Indonesia?</spna
+                                                >
+                                                <ion-icon
+                                                    name="add-outline"
+                                                    aria-hidden="true"
+                                                    class="down"
+                                                ></ion-icon>
+                                            </button>
+                                        </h3>
+
+                                        <p class="accordion-content">
+                                            Resi Digital hanya dapat mencatat
+                                            riwayat transaksi tol Jasa Marga
+                                            Group.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="faq-info-item">
+                                    <div class="accordion-card" data-accordion>
+                                        <h3 class="card-title">
+                                            <button
+                                                class="accordion-btn"
+                                                data-accordion-btn
+                                            >
+                                                <spna class="span h5"
+                                                    >Berapa lama Resi Digital
+                                                    Website dapat menyimpan
+                                                    riwayat transaksi
+                                                    Saya?</spna
+                                                >
+                                                <ion-icon
+                                                    name="add-outline"
+                                                    aria-hidden="true"
+                                                    class="down"
+                                                ></ion-icon>
+                                            </button>
+                                        </h3>
+
+                                        <p class="accordion-content">
+                                            Resi Digital Website hanya dapat
+                                            menyimpan riwayat transaksi tol
+                                            selama 3 hari.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="faq-info-item">
+                                    <div class="accordion-card" data-accordion>
+                                        <h3 class="card-title">
+                                            <button
+                                                class="accordion-btn"
+                                                data-accordion-btn
+                                            >
+                                                <spna class="span h5"
+                                                    >Dimana Saya bisa melihat
+                                                    riwayat transaksi saya lebih
+                                                    dari 3 hari?</spna
+                                                >
+                                                <ion-icon
+                                                    name="add-outline"
+                                                    aria-hidden="true"
+                                                    class="down"
+                                                ></ion-icon>
+                                            </button>
+                                        </h3>
+
+                                        <p class="accordion-content">
+                                            Untuk mendapatkan riwayat transaksi
+                                            tol lebih lama, Anda dapat
+                                            mendaftarkan kartu pada aplikasi
+                                            Travoy.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul
+                                class="faq"
+                                data-tab-content="faq-customer-care"
+                            >
+                                <li class="faq-info-item">
+                                    <div class="accordion-card" data-accordion>
+                                        <h3 class="card-title">
+                                            <button
+                                                class="accordion-btn"
+                                                data-accordion-btn
+                                            >
+                                                <spna class="span h5"
+                                                    >Kemana Saya bisa melaporkan
+                                                    kendala saat mencetak Resi
+                                                    Digital?</spna
+                                                >
+                                                <ion-icon
+                                                    name="add-outline"
+                                                    aria-hidden="true"
+                                                    class="down"
+                                                ></ion-icon>
+                                            </button>
+                                        </h3>
+
+                                        <p class="accordion-content">
+                                            Anda dapat mengirimkan email kendala
+                                            ke
+                                            <strong
+                                                ><a
+                                                    href="mailto:travoysupp@gmail.com?subject=Resi%20Digital%20Website"
+                                                    class="email-link"
+                                                    >travoysupp@gmail.com</a
+                                                ></strong
+                                            >
+                                            dengan subjek
+                                            <strong
+                                                >Resi Digital Website</strong
+                                            >
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!--
+                - #DOWNLOAD-INFO
+                -->
+
+                <section
+                    class="section download-info"
+                    aria-labelledby="download-info-label"
+                    id="download-app"
+                >
+                    <div class="container">
+                        <figure class="download-info-banner">
+                            <img
+                                src="./assets/images/sample-app.png"
+                                width="450"
+                                height="395"
+                                loading="lazy"
+                                alt="download-info banner"
+                            />
+                        </figure>
+
+                        <div class="download-info-content">
+                            <img
+                                src="./assets/images/travoy-logo.png"
+                                width="184"
+                                height="41"
+                                alt="travoy logo"
+                                class="logo-travoy"
+                            />
+                            <h2 class="h2 section-title">
+                                Rasakan Pengalaman Memilliki Asisten Digital
+                                Perjalanan!
+                            </h2>
+
+                            <p class="section-text">
+                                Dilengkapi fitur CCTV, Informasi Lalu Lintas,
+                                Rest Area dan lainnya yang dapat mendukung
+                                perjalanan Anda.
+                            </p>
+
+                            <div class="download-platform">
+                                <a
+                                    href="https://play.google.com/store/apps/details?id=com.jm.travoy"
+                                    target="_blank"
+                                >
+                                    <img
+                                        src="./assets/images/app-store.png"
+                                        width="157"
+                                        height="53"
+                                        alt="app store"
+                                        class="platform"
+                                    />
+                                </a>
+                                <a
+                                    href="https://apps.apple.com/id/app/travoy/id1494817947"
+                                    target="_blank"
+                                >
+                                    <img
+                                        src="./assets/images/google-play.png"
+                                        width="169"
+                                        height="53"
+                                        alt="play store"
+                                        class="platform"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--
+                - #OFFER
+                -->
+
+                <section class="section offer" aria-label="our offer">
+                    <div class="container">
+                        <figure class="offer-banner">
+                            <img
+                                src="./assets/images/offer-banner.png"
+                                width="640"
+                                height="532"
+                                loading="lazy"
+                                alt="offer banner"
+                            />
+                        </figure>
+                        <div class="offer-content">
+                            <h2 class="h2 section-title">Penawaran Menarik!</h2>
+                            <p class="section-text">
+                                Raih keuntungan lebih banyak dengan pasang iklan
+                                di Website dan Aplikasi Travoy!
+                            </p>
+                            <a href="#" class="offer-join">
+                                Daftar Sekarang
+                                <ion-icon
+                                    name="arrow-forward-outline"
+                                    aria-hidden="true"
+                                ></ion-icon
+                            ></a>
+                        </div>
+                    </div>
+                </section>
             </article>
         </main>
+
+        <!--
+                - #FOOTER
+                -->
+
+        <footer class="footer" id="footer">
+            <div class="container grid-list">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img
+                            src="./assets/images/logo.svg"
+                            width="159"
+                            height="40"
+                            alt="Adex home"
+                        />
+                    </a>
+
+                    <ul class="social-list">
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-youtube"></ion-icon>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h4 footer-list-title">Kontak Kami</p>
+                    </li>
+
+                    <li class="with-icon">
+                        <ion-icon name="map-outline"></ion-icon>
+                        <address class="footer-text">
+                            Plaza Tol Tmii, Gedung Cabang Jagorawi Lt. 3 & 4
+                            Plaza Tol TMII, Dukuh, Kramatjati, RT.8/RW.2, Dukuh,
+                            Kec. Kramat jati, Kota Jakarta Timur, Daerah Khusus
+                            Ibukota Jakarta 13550
+                        </address>
+                    </li>
+
+                    <li class="with-icon">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <a href="tel:14080" class="footer-link">14080</a>
+                    </li>
+
+                    <li class="with-icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+
+                        <a href="travoysupp@gmail.com" class="footer-link"
+                            >travoysupp@gmail.com</a
+                        >
+                    </li>
+                </ul>
+
+                <div class="footer-list">
+                    <p class="h4 footer-list-title">Download App</p>
+
+                    <img
+                        src="./assets/images/travoy-logo.png"
+                        width="184"
+                        height="41"
+                        alt="travoy logo"
+                        class="logo-travoy"
+                    />
+                    <div class="footer-platform">
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.jm.travoy"
+                            target="_blank"
+                        >
+                            <img
+                                src="./assets/images/app-store.png"
+                                width="118"
+                                height="40"
+                                alt="app store"
+                                class="platform"
+                            />
+                        </a>
+                        <a
+                            href="https://apps.apple.com/id/app/travoy/id1494817947"
+                            target="_blank"
+                        >
+                            <img
+                                src="./assets/images/google-play.png"
+                                width="127"
+                                height="40"
+                                alt="play store"
+                                class="platform"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="footer-copyright">
+                    ©Copyright 2023 PT Jasamarga Tollroad Operator. All Right
+                    Reserved.
+                </div>
+            </div>
+        </footer>
+
+        <div class="back-to-top" id="back2top">
+            <ion-icon name="arrow-up-outline"></ion-icon>
+        </div>
 
         <!--
     - custom js link

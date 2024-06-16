@@ -34,7 +34,7 @@ addEventOnElements(navTogglers, "click", toggleNavbar);
 const header = document.querySelector("[data-header]");
 
 window.addEventListener("scroll", function () {
-  if (window.scrollY > 100) {
+  if (window.scrollY > 65) {
     header.classList.add("active");
   } else {
     header.classList.remove("active");
@@ -132,3 +132,59 @@ const initAccordion = function (currentAccordion) {
 for (let i = 0, len = accordions.length; i < len; i++) {
   initAccordion(accordions[i]);
 }
+
+/**
+ * TABS
+ */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".tab");
+  const faqs = document.querySelectorAll(".faq");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => t.classList.remove("tab-active"));
+
+      faqs.forEach((faq) => (faq.style.display = "none"));
+
+      tab.classList.add("tab-active");
+
+      const tabContent = document.querySelector(
+        `.faq[data-tab-content="${tab.dataset.tab}"]`,
+      );
+      if (tabContent) {
+        tabContent.style.display = "block";
+      }
+    });
+  });
+
+  if (tabs.length > 0) {
+    tabs[0].classList.add("tab-active");
+    const initialTabContent = document.querySelector(
+      `.faq[data-tab-content="${tabs[0].dataset.tab}"]`,
+    );
+    if (initialTabContent) {
+      initialTabContent.style.display = "block";
+    }
+  }
+});
+
+/**
+ * BACK TO TOP
+ * active header when window scroll down to 100px
+ */
+
+document.addEventListener("scroll", function () {
+  const back2top = document.getElementById("back2top");
+  if (window.scrollY > 500) {
+    back2top.classList.add("show");
+    back2top.classList.remove("hide");
+  } else {
+    back2top.classList.add("hide");
+    back2top.classList.remove("show");
+  }
+});
+
+document.getElementById("back2top").addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});

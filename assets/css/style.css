@@ -12,8 +12,13 @@
    */
 
     --blue-dark: hsla(220, 56%, 32%, 1);
+    --blue-dark2: hsla(220, 57%, 32%, 1);
     --blue-light: hsla(201, 100%, 93%, 1);
+    --blue-light2: hsla(202, 100%, 96%, 1);
+    --blue-light3: hsla(214, 86%, 75%, 1);
+    --blue-light4: hsla(221, 33%, 70%, 1);
     --dark-grey: hsla(0, 0%, 20%, 1);
+    --black: hsla(0, 0%, 0%, 1);
     --violet-blue-crayola: hsla(234, 50%, 64%, 1);
     --dark-cornflower-blue_a7: hsla(214, 88%, 27%, 0.07);
     --white: hsla(0, 0%, 100%, 1);
@@ -28,6 +33,7 @@
     --charcoal: hsla(218, 22%, 26%, 1);
     --raisin-black: hsla(216, 14%, 14%, 1);
     --light-gray: hsla(0, 0%, 51%, 1);
+    --light-gray2: hsla(0, 0%, 85%, 1);
     --blue-crayola: hsla(219, 72%, 56%, 1);
     --black-coral: hsla(220, 12%, 43%, 1);
 
@@ -39,6 +45,7 @@
 
     --fs-1: calc(2.7rem + 1.38vw);
     --fs-2: calc(2.6rem + 0.66vw);
+    --fs-2-2: 3rem;
     --fs-3: 2.2rem;
     --fs-4: 1.9rem;
     --fs-5: 1.8rem;
@@ -52,7 +59,7 @@
    * spacing
    */
 
-    --section-padding: 90px;
+    --section-padding: 30px;
 
     /**
    * box shadow
@@ -177,7 +184,7 @@ body.nav-active {
 \*-----------------------------------*/
 
 .container {
-    padding-inline: 16px;
+    padding-inline: 20px;
 }
 
 .social-list {
@@ -277,7 +284,7 @@ body.nav-active {
     font-size: var(--fs-4);
     color: var(--blue-dark);
     font-weight: var(--fw-700);
-    margin-block-end: 30px;
+    margin-block-end: 20px;
 }
 
 .grid-list {
@@ -287,6 +294,42 @@ body.nav-active {
 
 .w-100 {
     width: 100%;
+}
+
+.back-to-top {
+    background-color: var(--blue-dark2);
+    color: var(--white);
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    right: 70px;
+    bottom: 30px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s,
+        visibility 0.3s;
+    cursor: pointer;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.footer-copyright {
+    color: var(--blue-light4);
+    margin-top: 50px;
 }
 
 /*-----------------------------------*\
@@ -318,6 +361,7 @@ body.nav-active {
     0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -440,6 +484,11 @@ body.nav-active {
     padding: 0px;
 }
 
+.hero.slide-content {
+    background-color: var(--blue-light2);
+    margin-top: 54px;
+}
+
 .hero .container {
     display: grid;
     gap: 70px;
@@ -474,6 +523,7 @@ body.nav-active {
     0% {
         box-shadow: 0 0 0 0 var(--white_a70);
     }
+
     75% {
         box-shadow: 0 0 0 20px transparent;
     }
@@ -522,19 +572,19 @@ body.nav-active {
 }
 
 /*-----------------------------------*\
-  #SERVICE
+  #RESI-DIGITAL
 \*-----------------------------------*/
 
-.service {
+.resi-digital {
     /* text-align: center; */
 }
 
-.service .section-title {
+.resi-digital .section-title {
     margin-block-end: 50px;
 }
 
-.service-card {
-    padding: 40px;
+.resi-digital-card {
+    padding: 10px 20px;
     box-shadow: var(--shadow-2);
     border-radius: var(--radius-6);
     color: var(--light-gray);
@@ -554,10 +604,10 @@ ul.card-text {
     padding-bottom: 4px;
 }
 
-.service-card .card-icon {
+.resi-digital-card .card-icon {
     width: 60px;
     height: 60px;
-    background-color: var(--violet-blue-crayola);
+    background-color: var(--blue-dark);
     display: grid;
     place-items: center;
     color: var(--white);
@@ -566,40 +616,82 @@ ul.card-text {
     margin-inline: auto;
 }
 
-.service-card .card-icon ion-icon {
+.resi-digital-card .card-icon ion-icon {
     --ionicon-stroke-width: 50px;
 }
 
-.service-card .card-title {
+.resi-digital-card .card-title {
     margin-block: 16px 10px;
 }
 
-.service-card .btn-text {
+.resi-digital-card .btn-text {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4px;
     margin-block-start: 10px;
-    color: var(--violet-blue-crayola);
+    color: var(--blue-dark);
     font-weight: var(--fw-700);
     transition: var(--transition-1);
 }
 
-.service-card .btn-text:is(:hover, :focus-visible) {
+.resi-digital-card .btn-text:is(:hover, :focus-visible) {
     opacity: 0.9;
 }
 
 /*-----------------------------------*\
-  #ABOUT
+  #FAQ-INFO
 \*-----------------------------------*/
-
-.about .container {
-    display: grid;
-    gap: 50px;
+.faq-info {
+    background-color: var(--blue-light2);
+    padding-block: 50px;
 }
 
-.about .section-title {
-    margin-block-end: 35px;
+.faq-info .tabs-menu {
+    background-color: var(--white);
+    padding: 50px 40px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-info .tab {
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.faq-info .tab.tab-active {
+    background-color: var(--blue-dark);
+}
+
+.faq-info .tab h3 {
+    color: var(--blue-light3);
+    font-size: var(--fs-5);
+    font-weight: 400;
+}
+
+.faq-info .tab.tab-active h3 {
+    color: var(--white);
+}
+
+.faq-info .container {
+    display: grid;
+    gap: 150px;
+}
+
+.faq-info spna {
+    text-align: left;
+    font-weight: 400;
+}
+
+.accordion-card {
+    border-bottom: 1px solid var(--light-gray2);
+    margin-bottom: 15px;
 }
 
 .accordion-card .card-title {
@@ -608,14 +700,16 @@ ul.card-text {
 
 .accordion-btn {
     display: flex;
-    align-items: center;
     gap: 10px;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .accordion-btn ion-icon {
-    font-size: 1.5rem;
-    color: var(--blue-crayola);
+    font-size: var(--fs-3);
+    color: var(--blue-dark);
     transition: var(--transition-1);
+    min-width: 40px;
 }
 
 .accordion-card.expanded .accordion-btn ion-icon {
@@ -624,17 +718,27 @@ ul.card-text {
 
 .accordion-btn .span {
     transition: var(--transition-1);
+    color: var(--black);
 }
 
 .accordion-btn:is(:hover, :focus-visible) .span,
 .accordion-card.expanded .accordion-btn .span {
-    color: var(--violet-blue-crayola);
+    color: var(--blue-dark);
 }
 
 .accordion-content {
-    padding-inline-start: 24px;
     max-height: 0;
     overflow: hidden;
+    color: var(--light-gray);
+    font-size: var(--fs-8);
+}
+
+.accordion-content a.email-link {
+    display: inline;
+}
+
+.accordion-content ul li {
+    list-style: inside;
 }
 
 .accordion-card.expanded .accordion-content {
@@ -643,141 +747,107 @@ ul.card-text {
 }
 
 /*-----------------------------------*\
-  #FEATURES
+  #DOWNLOAD-INFOS
 \*-----------------------------------*/
 
-.feature .container {
+.download-info .container {
     display: grid;
     gap: 50px;
 }
 
-.feature .section-text {
+.download-info .download-info-banner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-block: 20px;
+}
+
+.download-info .download-info-banner img {
+    width: 100%;
+    height: auto;
+}
+
+.download-info .download-info-banner:before {
+    height: 0;
+    width: 0;
+}
+
+.download-info .download-info-banner:after {
+    content: "";
+    background-image: url(../images/ornament.png);
+    background-repeat: no-repeat;
+    background-size: 200px;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: -30px;
+    background-position: right;
+}
+
+.download-info .section-title {
+    font-size: var(--fs-2-2);
+    color: var(--blue-dark2);
+}
+
+.download-info .section-text {
     margin-block: 25px 30px;
+    color: var(--light-gray);
 }
 
-.feature-list {
-    display: grid;
+.download-info .logo-travoy {
+    margin-bottom: 30px;
+}
+
+.download-info .download-platform {
+    display: flex;
     gap: 15px;
+    justify-content: space-between;
 }
 
-.feature-card {
-    display: flex;
+.download-info .download-platform img {
+    width: 100%;
+}
+
+/*-----------------------------------*\
+  #OFFER
+\*-----------------------------------*/
+
+.offer {
+    background-color: var(--blue-light2);
+    padding-block: 0px;
+    padding-top: 30px;
+}
+
+.offer .container {
     align-items: center;
-    gap: 10px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
-.feature-card .card-icon {
-    background-color: var(--lavender-web);
-    font-size: 1.4rem;
-    padding: 4px;
-    border-radius: var(--radius-circle);
+.offer-banner img {
+    width: 100%;
 }
 
-.feature-card .card-icon ion-icon {
-    --ionicon-stroke-width: 40px;
+.offer .section-title {
+    font-size: var(--fs-2-2);
+    color: var(--blue-dark2);
 }
 
-/*-----------------------------------*\
-  #STATS
-\*-----------------------------------*/
-
-.stats {
-    background-image: linear-gradient(
-        to bottom,
-        var(--white) 50%,
-        var(--cultured) 50%
-    );
+.offer .section-text {
+    margin-block: 25px 30px;
+    color: var(--black);
 }
 
-.stats-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-    gap: 36px 24px;
-    padding: 45px 30px;
-    border-radius: var(--radius-8);
-}
-
-.stats-card .card-text > * {
+.offer-join {
+    background-color: var(--blue-dark2);
+    border-radius: 100px;
+    padding: 10px 25px;
     color: var(--white);
-}
-
-/*-----------------------------------*\
-  #PROJECT
-\*-----------------------------------*/
-
-.project {
-    background-color: var(--cultured);
-}
-
-.project :is(.section-subtitle, .section-title) {
-    text-align: center;
-}
-
-.project .section-title {
-    margin-block-end: 50px;
-}
-
-.project-card {
-    background-color: var(--white);
-    border-radius: var(--radius-8);
-    overflow: hidden;
-    box-shadow: var(--shadow-2);
-    height: 100%;
-}
-
-.project-card .card-content {
-    padding: 30px;
-}
-
-.project-card .card-title {
-    transition: var(--transition-1);
-}
-
-.project-card .card-title:is(:hover, :focus-visible) {
-    color: var(--violet-blue-crayola);
-}
-
-.project-card .card-text {
-    margin-block: 16px 20px;
-}
-
-.project-card .card-meta-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.project-card .card-meta-item {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 4px;
-    color: var(--cadet-blue-crayola);
-    font-size: var(--fs-8);
-}
-
-/*-----------------------------------*\
-  #CTA
-\*-----------------------------------*/
-
-.cta {
-    background-color: var(--charcoal);
-}
-
-.cta .container {
-    padding-block: 100px 60px;
-    border-block-end: 1px solid var(--cadet-blue-crayola_a20);
-}
-
-.cta .section-title {
-    color: var(--white);
-    margin-block-end: 30px;
-}
-
-.cta .btn {
-    background-color: var(--violet-blue-crayola);
-    color: var(--white);
-    border: none;
+    gap: 13px;
 }
 
 /*-----------------------------------*\
@@ -785,22 +855,51 @@ ul.card-text {
 \*-----------------------------------*/
 
 .footer {
-    background-color: var(--charcoal);
-    padding-block: 60px 100px;
+    background-color: var(--white);
+    padding-block: 20px 60px;
     color: var(--light-gray);
 }
 
-.footer-brand .footer-text {
-    margin-block: 20px;
+.footer .social-list {
+    color: var(--blue-dark2);
+    margin-top: 20px;
 }
 
-.footer .social-list {
-    color: var(--white);
+.footer .social-list li a {
+    background-color: var(--blue-light);
+    border-radius: 50px;
+    width: 41px;
+    height: 41px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-list-title {
-    color: var(--white);
+    color: var(--blue-light4);
     margin-block-end: 16px;
+    font-size: 16px;
+}
+
+.footer-list li {
+    color: var(--blue-light4);
+}
+
+.footer-list li.with-icon {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 0.07fr 1fr;
+}
+
+.footer .footer-platform {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.footer-list li.with-icon ion-icon {
+    font-size: 20px;
+    padding-top: 5px;
 }
 
 .footer-link {
@@ -809,7 +908,7 @@ ul.card-text {
 }
 
 .footer-link:is(:hover, :focus-visible) {
-    color: var(--violet-blue-crayola);
+    color: var(--blue-dark);
 }
 
 .input-wrapper {
@@ -838,7 +937,7 @@ ul.card-text {
     right: 0;
     bottom: 0;
     border-radius: 0 var(--radius-6) var(--radius-6) 0;
-    background-color: var(--violet-blue-crayola);
+    background-color: var(--blue-dark);
     color: var(--white);
     padding-inline: 24px;
     font-weight: var(--fw-700);
@@ -868,11 +967,11 @@ ul.card-text {
     }
 
     /**
-   * PROJECTS
+   * FOOTER
    */
 
-    .project-card .card-content {
-        padding: 40px;
+    .footer {
+        padding-block: 60px 100px;
     }
 }
 
@@ -890,7 +989,7 @@ ul.card-text {
      * spacing
      */
 
-        --section-padding: 60px;
+        --section-padding: 40px;
     }
 
     /**
@@ -916,40 +1015,52 @@ ul.card-text {
     }
 
     .header.active .btn {
-        background-color: var(--violet-blue-crayola);
-        border-color: var(--violet-blue-crayola);
+        background-color: var(--blue-dark);
+        border-color: var(--blue-dark);
         color: var(--white);
     }
 
     /**
-   * SERVICE
+   * RESI-DIGITAL
    */
 
-    .service .section-title {
+    .resi-digital .section-title {
         max-width: 30ch;
         margin-inline: auto;
     }
 
     /**
-   * ABOUT
+   * FAQ-INFO
    */
 
-    .about .container {
-        grid-template-columns: 1fr 0.7fr;
-        align-items: center;
+    .faq-info .container {
+        grid-template-columns: 1fr;
     }
 
     /**
-   * FEATURE
+   * DOWNLOAD-INFO
    */
 
-    .feature .container {
-        grid-template-columns: 0.7fr 1fr;
+    .download-info .container {
+        grid-template-columns: 1fr 0.8fr;
         align-items: center;
     }
 
-    .feature-banner {
+    .download-info-banner {
         order: 1;
+    }
+
+    .download-info .download-platform {
+        justify-content: left;
+    }
+
+    /**
+   * OFFER
+   */
+
+    .offer .container {
+        /* grid-template-columns: 1fr 0.7fr;
+        align-items: center; */
     }
 }
 
@@ -1007,7 +1118,7 @@ ul.card-text {
 
     .header.active .navbar-link:is(:hover, :focus-visible) {
         opacity: 1;
-        color: var(--violet-blue-crayola);
+        color: var(--blue-dark);
     }
 
     .header .btn {
@@ -1015,39 +1126,59 @@ ul.card-text {
     }
 
     /**
-   * STATS
+   * HERO
    */
 
-    .stats-card {
-        grid-template-columns: repeat(4, 1fr);
+    .hero.slide-content {
+        margin-top: 63px;
     }
 
     /**
-   * PROJECT
+   * FAQ-INFO
    */
 
-    .project .section-title {
-        max-width: 32ch;
-        margin-inline: auto;
-    }
-
-    /**
-   * CTA
-   */
-
-    .cta .container {
-        display: flex;
-        justify-content: space-between;
+    .faq-info .container {
+        grid-template-columns: 1fr 1fr;
         align-items: center;
     }
 
-    .cta .btn {
-        min-width: max-content;
+    /**
+   * DOWNLOAD-INFOS
+   */
+
+    .download-info .download-info-banner img {
+        width: 450px;
     }
 
-    .cta .section-title {
-        max-width: 30ch;
-        margin-block-end: 0;
+    .download-info .download-info-banner:before {
+        content: "";
+        background-image: url(../images/star.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        bottom: -15px;
+    }
+
+    .download-info .download-platform img {
+        height: 53px;
+        width: auto;
+    }
+
+    .download-info .container {
+        grid-template-columns: 0.7fr 1fr;
+        align-items: center;
+    }
+
+    /**
+   * OFFER
+   */
+
+    .offer .container {
+        display: grid;
+        grid-template-columns: 1fr 0.7fr;
+        gap: 100px;
     }
 
     /**
@@ -1055,7 +1186,7 @@ ul.card-text {
    */
 
     .footer .grid-list {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1fr 1fr 0.7fr;
     }
 }
 
@@ -1081,31 +1212,19 @@ ul.card-text {
     }
 
     /**
-   * SERVICE
+   * RESI-DIGITAL
    */
 
-    .service .grid-list {
+    .resi-digital .grid-list {
         grid-template-columns: repeat(2, 1fr);
     }
 
     /**
-   * STATS
+   * OFFER
    */
 
-    .stats .container {
-        max-width: 70%;
-    }
-
-    .stats-card {
-        padding: 60px;
-    }
-
-    /**
-   * PROJECT
-   */
-
-    .project .grid-list {
-        grid-template-columns: repeat(3, 1fr);
+    .offer .container {
+        grid-template-columns: 1fr 0.8fr;
     }
 
     /**
@@ -1132,10 +1251,10 @@ ul.card-text {
     }
 
     /**
-   * FEATURE
+   * DOWNLOAD-INFO
    */
 
-    .feature-list {
+    .download-info-list {
         grid-template-columns: 1fr 1fr;
     }
 }
